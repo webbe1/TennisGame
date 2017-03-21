@@ -29,24 +29,24 @@ public class TestGame {
 
     @Test
     public void fifteenequals1() {
-        frank.winBall();
+        frank.pointEarned();
         assertEquals(game.getScore(), "love, fifteen");
     }
 
     @Test
     public void thirtyequals2() {
-        james.winBall();
-        frank.winBall();
-        james.winBall();
+        james.pointEarned();
+        frank.pointEarned();
+        james.pointEarned();
 
         assertEquals(game.getScore(), "thirty, fifteen");
     }
 
     @Test
     public void fortyequals3() {
-        james.winBall();
-        james.winBall();
-        james.winBall();
+        james.pointEarned();
+        james.pointEarned();
+        james.pointEarned();
 
         assertEquals(game.getScore(), "forty, love");
 
@@ -54,13 +54,13 @@ public class TestGame {
 
     @Test
     public void advantageiswhenscoreis4to3() {
-        james.winBall();
-        james.winBall();
-        frank.winBall();
-        james.winBall();
-        frank.winBall();
-        frank.winBall();
-        frank.winBall();
+        james.pointEarned();
+        james.pointEarned();
+        frank.pointEarned();
+        james.pointEarned();
+        frank.pointEarned();
+        frank.pointEarned();
+        frank.pointEarned();
 
 
         assertEquals(game.getScore(), "advantage Frank");
@@ -68,31 +68,31 @@ public class TestGame {
 
     @Test
     public void deucewhenplayersareequalat3ormore() {
-        james.winBall();
-        james.winBall();
-        james.winBall();
-        frank.winBall();
-        frank.winBall();
-        frank.winBall();
+        james.pointEarned();
+        james.pointEarned();
+        james.pointEarned();
+        frank.pointEarned();
+        frank.pointEarned();
+        frank.pointEarned();
 
         assertEquals(game.getScore(), "deuce");
-        frank.winBall();
+        frank.pointEarned();
         assertEquals(game.getScore(), "advantage Frank");
-        james.winBall();
+        james.pointEarned();
         assertEquals(game.getScore(), "deuce");
     }
 
 
     @Test
     public void gameShouldBeWonByTheFirstPlayerToHaveWonAtLeastFourPointsInTotalAndWithAtLeastTwoPointsMoreThanTheOpponent() {
-        james.winBall();
-        james.winBall();
-        james.winBall();
-        frank.winBall();
-        frank.winBall();
-        frank.winBall();
-        frank.winBall();
-        frank.winBall();
+        james.pointEarned();
+        james.pointEarned();
+        james.pointEarned();
+        frank.pointEarned();
+        frank.pointEarned();
+        frank.pointEarned();
+        frank.pointEarned();
+        frank.pointEarned();
 
         assertEquals(game.getScore(), "Frank wins");
 

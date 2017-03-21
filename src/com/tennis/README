@@ -1,0 +1,17 @@
+This README file goes over some of the things about the TennisGame program.
+This game does not include a main file as it is purely test based.
+
+There are 3 classes. TestGame which holds the test cases. Player with is for the player objects. And game which
+simulates the score.
+
+The game contains 2 players. The players will play a match of Tennis. The first one to reach 4 point and have more than
+2 points more than the opponent will win.
+
+The scoring system is as follows:
+0 = love
+1 = fifteen
+2 = thirty
+3 = forty
+
+When scores are tied at 3 or more the score = duece.
+When one player leads by 1 and both scores are 3 or more the score = advantage "name of player".
